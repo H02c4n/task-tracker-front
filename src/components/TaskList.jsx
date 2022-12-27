@@ -23,9 +23,9 @@ const TaskList = ({ tasks, getTask }) => {
           let priorityColor = "";
           if (priority.toLowerCase() === "high") {
             priorityColor = "danger";
-          } else if (priority.to === "medium") {
+          } else if (priority.toLowerCase() === "medium") {
             priorityColor = "info";
-          } else if (priority === "low") {
+          } else if (priority.toLowerCase() === "low") {
             priorityColor = "success";
           }
           return (
