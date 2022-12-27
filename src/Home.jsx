@@ -7,7 +7,7 @@ const Home = () => {
 
     const[tasks, setTasks] = useState()
 
-    const url = "http://localhost:8000/tasks/all/"
+    const url = "https://svtrhozcan.pythonanywhere.com/tasks/all/"
 
     const getTask = async() =>{
         const {data} = await axios(url)

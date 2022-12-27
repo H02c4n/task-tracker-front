@@ -6,7 +6,7 @@ const TaskList = ({ tasks, getTask }) => {
 
 
   const deleteTask = async (id) => {
-    const url = "http://localhost:8000/tasks";
+    const url = "https://svtrhozcan.pythonanywhere.com/tasks";
     try {
       await axios.delete(`${url}/${id}`);
     } catch (error) {

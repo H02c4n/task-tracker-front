@@ -29,7 +29,7 @@ const AddTask = ({getTask}) => {
 
 
   const addNewTask = async(newTask) =>{
-    const url = "http://localhost:8000/tasks/all/";
+    const url = "https://svtrhozcan.pythonanywhere.com/tasks/all/";
     try {
         await axios.post(url, newTask)
     } catch (error) {
