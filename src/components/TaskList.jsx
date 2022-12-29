@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {RiDeleteBin2Fill} from "react-icons/ri"
 import ListGroup from "react-bootstrap/ListGroup";
 
 const TaskList = ({ tasks, getTask }) => {
@@ -29,7 +30,7 @@ const TaskList = ({ tasks, getTask }) => {
             priorityColor = "success";
           }
           return (
-            <ListGroup.Item key={id}>
+            <ListGroup.Item key={id} className="mt-2">
               <div className="d-flex justify-content-between">
                 {task}
                 <span>
@@ -38,13 +39,13 @@ const TaskList = ({ tasks, getTask }) => {
                   >
                     {priority}
                   </span>
-                  <span
-                    onClick={() => deleteTask(id)}
-                    className="badge bg-danger"
-                    role="button"
-                  >
-                    X
-                  </span>
+                  <RiDeleteBin2Fill
+              onClick={()=>deleteTask(id)}
+              style={{
+                cursor:"pointer",
+                marginRight:"5px",
+                fontSize:"2rem"
+              }}/>
                 </span>
               </div>
             </ListGroup.Item>
@@ -52,6 +53,7 @@ const TaskList = ({ tasks, getTask }) => {
         })}
       </ListGroup>
     </div>
+    
   );
 };
 
